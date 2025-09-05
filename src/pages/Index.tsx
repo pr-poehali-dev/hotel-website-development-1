@@ -333,7 +333,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-4">HOTEL</h3>
+          <h3 className="text-2xl font-bold mb-4">Гостиница Сталагмит</h3>
           <p className="text-gray-400 mb-8">Классический комфорт в сердце города</p>
           <div className="flex justify-center space-x-6">
             <Icon name="Facebook" size={24} className="text-gray-400 hover:text-white cursor-pointer transition-colors" />
