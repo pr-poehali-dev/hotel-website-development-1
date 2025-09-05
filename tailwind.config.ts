@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hotel: {
+					brown: '#8B4513',
+					beige: '#F5F5DC',
+					'dark-brown': '#654321',
+					'light-beige': '#FAF0E6'
 				}
 			},
 			borderRadius: {
