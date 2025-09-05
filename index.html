@@ -30,6 +30,54 @@
 <div id="root"></div>
 <script type="module" src="/src/main.tsx"></script>
 
+<!-- BookOnline24 Booking Widget -->
+<script type="text/javascript">
+    (function(k,o,t,e,l){
+        l = document.createElement("script");
+        l.type = "text/javascript";
+        l.src = "https://bookonline24.ru/widget.js";
+        l.async = !0;
+        l.onload = l.onreadystatechange = function() {
+            e = this.readyState;
+            !o && (!e || e === "complete") && (o = 1) && k();
+        };
+        t = document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(l, t);
+    })(function(){
+        HotelWidget.init({
+            hotelId: "ac9cf192-d540-4cac-ac0d-07e288d71f3e",
+            version: "2",
+            hooks: {
+                onError: function(e) { console.error("onError", e); },
+                onInit: function() { console.log("onInit"); },
+                onBooking: function(v) { console.log("onBooking", v) }
+            }
+        }); 
+
+        HotelWidget.add({
+            type: "bookingForm",
+            inline: false,
+            appearance: {
+                container: "WidgetVerticalBlockId"
+            }
+        });
+
+        HotelWidget.add({
+            type: "roomsList",
+            appearance: {
+                container: "WidgetRoomsListId"
+            }
+        });
+
+        HotelWidget.add({
+            type: "showCheckAvailabilityButtonForMobileDevices",
+            appearance: {
+                container: "WidgetShowCheckAvailabilityButtonForMobileDevicesId"
+            }
+        });
+    });
+</script>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {

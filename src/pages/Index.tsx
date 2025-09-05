@@ -160,49 +160,41 @@ const Index = () => {
 
       {/* Booking Section */}
       <section id="booking" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Бронирование</h2>
-            <p className="text-xl text-gray-600">Выберите даты вашего пребывания</p>
+            <p className="text-xl text-gray-600">Выберите даты и забронируйте номер онлайн</p>
           </div>
           
-          <Card className="p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="guests">Количество гостей</Label>
-                  <Input id="guests" type="number" defaultValue="2" min="1" max="4" />
-                </div>
-                <div>
-                  <Label htmlFor="room-type">Тип номера</Label>
-                  <select className="w-full p-2 border border-gray-300 rounded-md">
-                    <option>Стандартный номер</option>
-                    <option>Делюкс номер</option>
-                    <option>Люкс</option>
-                  </select>
-                </div>
-                <div>
-                  <Label htmlFor="phone">Телефон</Label>
-                  <Input id="phone" type="tel" placeholder="+7 (999) 123-45-67" />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="example@mail.com" />
-                </div>
-                <Button className="w-full" size="lg">
-                  Забронировать сейчас
-                </Button>
-              </div>
-              
-              <div>
-                <Label className="text-base font-semibold mb-4 block">Выберите даты</Label>
-                <Calendar
-                  mode="range"
-                  className="rounded-md border"
-                />
-              </div>
-            </div>
-          </Card>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Booking Form Widget */}
+            <Card className="p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Быстрое бронирование</h3>
+              <div id="WidgetVerticalBlockId" className="min-h-[400px]"></div>
+            </Card>
+            
+            {/* Rooms List Widget */}
+            <Card className="p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Доступные номера</h3>
+              <div id="WidgetRoomsListId" className="min-h-[400px]"></div>
+            </Card>
+          </div>
+
+          {/* Mobile Check Availability Button */}
+          <div id="WidgetShowCheckAvailabilityButtonForMobileDevicesId"></div>
+          
+          {/* Fallback contact info */}
+          <div className="text-center mt-12 p-6 bg-secondary/10 rounded-lg">
+            <p className="text-lg text-gray-700 mb-2">
+              Есть вопросы по бронированию?
+            </p>
+            <p className="text-primary font-semibold text-xl">
+              📞 +7 (495) 123-45-67
+            </p>
+            <p className="text-gray-600 mt-2">
+              Или напишите нам на email: booking@hotel-classic.ru
+            </p>
+          </div>
         </div>
       </section>
 
